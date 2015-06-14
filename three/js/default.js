@@ -1,8 +1,8 @@
-﻿/// <reference path="../ts/winjs-2.0.d.ts" />
+/// <reference path="../ts/winjs-2.0.d.ts" />
 /// <reference path="../ts/three.d.ts" />
 /// <reference path="../ts/three-trackballcontrols.d.ts" />
-var M;
-(function (M) {
+var KinectThreejs;
+(function (KinectThreejs) {
     "use strict";
     var app = WinJS.Application;
     var activation = Windows.ApplicationModel.Activation;
@@ -29,7 +29,7 @@ var M;
     var boneCount = null;
     // C++ WinRT component
     var bodyImageProcessor = KinectImageProcessor.BodyHelper;
-    ////////////////////// threejs 
+    ////////////////////// threejs
     var container, stats;
     var camera, controls, scene, renderer;
     var objects = [], plane;
@@ -175,7 +175,6 @@ var M;
             bodyFrame.close();
         }
         if (dataReceived) {
-            // iterate through each body
             for (var bodyIndex = 0; bodyIndex < bodies.length; ++bodyIndex) {
                 var body = bodies[bodyIndex];
                 var isTracking = false;
@@ -271,5 +270,5 @@ var M;
         }
     };
     app.start();
-})(M || (M = {}));
+})(KinectThreejs || (KinectThreejs = {}));
 //# sourceMappingURL=default.js.map

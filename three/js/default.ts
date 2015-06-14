@@ -1,4 +1,4 @@
-﻿/// <reference path="../ts/winjs-2.0.d.ts" />
+/// <reference path="../ts/winjs-2.0.d.ts" />
 /// <reference path="../ts/three.d.ts" />
 /// <reference path="../ts/three-trackballcontrols.d.ts" />
 
@@ -8,7 +8,7 @@ declare var WindowsPreview;
 declare var Stats;
 declare var KinectImageProcessor;
 
-module M {
+module KinectThreejs {
   "use strict";
 
   var app = WinJS.Application;
@@ -36,24 +36,24 @@ module M {
   // bone defined by two joints
   var bones = null;
 
-  
+
   // total number of joints = 25
   var jointCount = null;
 
   // total number of bones = 24
   var boneCount = null;
- 
+
 
   // C++ WinRT component
   var bodyImageProcessor = KinectImageProcessor.BodyHelper;
 
 
-  ////////////////////// threejs 
+  ////////////////////// threejs
   var container, stats;
   var camera, controls, scene: THREE.Scene, renderer;
   var objects = <THREE.Mesh[]>[], plane;
 
-  var raycaster = new THREE.Raycaster(); 
+  var raycaster = new THREE.Raycaster();
   var mouse = new THREE.Vector2(),
     offset = new THREE.Vector3(),
     INTERSECTED, SELECTED;
@@ -68,14 +68,14 @@ module M {
     document.body.appendChild(container);
 
     // major settings coords in meter
-    
+
     var fieldZize = 0.6;
     var oriBoxSize = 0.03;  // will be random scaled x,y,z
     var sphereDia = 0.03;
 
     camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight); //, 1, 15
     camera.position.z = -1.0; // behind the sensor
-   
+
     controls = new THREE.TrackballControls(camera);
     controls.rotateSpeed = 1.0;
     controls.zoomSpeed = 1.2;
@@ -145,7 +145,7 @@ module M {
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.sortObjects = false;
-    
+
     renderer.useFog = true;
 
 
@@ -189,7 +189,7 @@ module M {
 
 
 
- 
+
 
 
   app.onactivated = args => {
@@ -284,7 +284,7 @@ module M {
           var joints = body.joints;
           // allocate space for storing joint locations
           var jointPoints = createJointPoints();
-                    
+
           // call native component to map all joint locations to depth space
           if (bodyImageProcessor.processJointLocations(joints, jointPoints)) {
 

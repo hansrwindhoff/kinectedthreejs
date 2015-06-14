@@ -1,0 +1,2 @@
+MainPackage=D:\temp\kinect\kinectedthreejs\three\bin\x86\Release\three_1.1.0.5_Bundle\three_1.1.0.5_x86.appx
+SymbolPackage=D:\temp\kinect\kinectedthreejs\three\AppPackages\three_1.1.0.5_Test\three_1.1.0.5_x86.appxsym
