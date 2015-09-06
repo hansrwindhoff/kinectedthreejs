@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="63665WELLC.KinectThreejs" Version="1.1.0.5" Publisher="CN=0EF83FF8-0A4F-424F-9F04-9746A1D0446B" />
+  <Identity Name="63665WELLC.KinectThreejs" Version="1.1.0.7" Publisher="CN=0EF83FF8-0A4F-424F-9F04-9746A1D0446B" />
   <Properties>
     <DisplayName>KinectThreejs</DisplayName>
     <PublisherDisplayName>WELLC</PublisherDisplayName>

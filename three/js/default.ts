@@ -1,3 +1,4 @@
+﻿
 /// <reference path="../ts/winjs-2.0.d.ts" />
 /// <reference path="../ts/three.d.ts" />
 /// <reference path="../ts/three-trackballcontrols.d.ts" />
@@ -112,7 +113,7 @@ module KinectThreejs {
     var materialSp = new THREE.MeshLambertMaterial({ color: 0xaabb00, opacity: 0.5, transparent: true, depthWrite: true });
     sphere = new THREE.Mesh(geometrySp, materialSp);
     scene.add(sphere);
-    scene.fog = new THREE.FogExp2(0xefd1b5, 0.5);
+    //scene.fog = new THREE.FogExp2(0xefd1b5, 0.5);
 
 
     // add the boxes
@@ -146,7 +147,7 @@ module KinectThreejs {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.sortObjects = false;
 
-    renderer.useFog = true;
+    //renderer.useFog = true;
 
 
     renderer.shadowMapEnabled = true;
@@ -159,7 +160,7 @@ module KinectThreejs {
     info.style.top = '60px';
     info.style.width = '100%';
     info.style.textAlign = 'center';
-    info.innerHTML = '<a href="http://threejs.org" target="_blank">three.js</a> kinect-draggable webgl cubes. Tested with "Kinect for windows"-V2. Connect the Kinect and stand in front of it, your left hand will control the camera your right hand will control the 3D cursor (ball) and when you make a fist with your right hand, the cursor will allow you to grab the cubes and move them. ';
+    info.innerHTML = '<a href="http://threejs.org" target="_blank">three.js</a> kinect-draggable webgl blocks. Tested with "Kinect for windows"-V2. Connect the Kinect and stand in front of it, your left hand will control the camera your right hand will control the 3D cursor (ball) and when you make a fist with your right hand, the cursor will allow you to grab the blocks and move them. ';
     container.appendChild(info);
     stats = new Stats();
     stats.domElement.style.position = 'absolute';

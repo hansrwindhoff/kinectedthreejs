@@ -37,7 +37,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>f7153997-c2e6-45d6-b445-2e8697c3287b</ProjectGuid>
-    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.5</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
@@ -100,7 +100,6 @@
     <Content Include="js\TrackballControls.js" />
     <None Include="three_StoreKey.pfx" />
     <None Include="Package.StoreAssociation.xml" />
-    <TypeScriptCompile Include="js\default.ts" />
     <None Include="ts\three-trackballcontrols.d.ts" />
     <None Include="ts\three.d.ts" />
     <None Include="ts\winjs-2.0.d.ts" />
