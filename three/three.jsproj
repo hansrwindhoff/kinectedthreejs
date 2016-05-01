@@ -37,7 +37,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>f7153997-c2e6-45d6-b445-2e8697c3287b</ProjectGuid>
-    <TypeScriptToolsVersion>1.5</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.6</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
@@ -55,10 +55,10 @@
     <RequiredPlatformVersion>8.1</RequiredPlatformVersion>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>three_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>three_TemporaryKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
-    <PackageCertificateThumbprint>223BCAA9E371CB001D7E4B2EF6E4F77159DFED77</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>6D983A3D319F41ADE660925104757655CC4B2595</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -98,13 +98,11 @@
     <Content Include="js\stats.min.js" />
     <Content Include="js\three.min.js" />
     <Content Include="js\TrackballControls.js" />
-    <None Include="three_StoreKey.pfx" />
-    <None Include="Package.StoreAssociation.xml" />
-    <None Include="ts\three-trackballcontrols.d.ts" />
-    <None Include="ts\three.d.ts" />
-    <None Include="ts\winjs-2.0.d.ts" />
+    <TypeScriptCompile Include="ts\three-trackballcontrols.d.ts" />
+    <TypeScriptCompile Include="ts\three.d.ts" />
+    <TypeScriptCompile Include="ts\winjs-2.0.d.ts" />
     <None Include="three_TemporaryKey.pfx" />
-    <None Include="webaudioapi\waa.d.ts" />
+    <TypeScriptCompile Include="webaudioapi\waa.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.VCLibs, version=12.0" />
@@ -113,6 +111,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KinectImageProcessor\KinectImageProcessor_8.1.vcxproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4a0dddb5-7a95-4fbf-97cc-616d07737a77}" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
